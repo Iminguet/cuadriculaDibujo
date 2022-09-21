@@ -1,4 +1,7 @@
 'use-strict';
+
+//colores como objeto. Revisar ejercicio mapeo del día 03
+
 //rojo
 const R1 = document.getElementById('R1');
 const R2 = document.getElementById('R2');
