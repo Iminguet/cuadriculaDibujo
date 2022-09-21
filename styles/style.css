@@ -18,7 +18,9 @@ main {
 
 .cuadricula {
   width: 79%;
-  background-color: red;
+  background: url(../img/printable-grid-graph-paper-20x20_405100.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .columnaColores {
@@ -26,19 +28,13 @@ main {
   background-color: blue;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .containerColores {
-  width: 90%;
+  width: 95%;
   height: auto;
-  background-color: yellow;
-}
-.containerColor {
-  width: 90%;
-  height: auto;
-  background-color: chartreuse;
 }
 
 .columnaAcciones {
@@ -48,4 +44,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.2em 0;
+}
+.coloresSeleccion {
+  border: 1px solid black;
+  width: 2.7em;
+  height: 2.7em;
 }
