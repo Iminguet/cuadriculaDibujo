@@ -18,9 +18,10 @@ main {
 
 .cuadricula {
   width: 79%;
-  background: url(../img/printable-grid-graph-paper-20x20_405100.png);
+  background: url(../img/blank-100-square-grid-paper_402494.jpg);
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .columnaColores {
@@ -42,10 +43,33 @@ main {
   background-color: green;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
+.containerBotones {
+  margin: 0.5em 0;
+  width: 90%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.containerBotones button {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.containerEstadisticas {
+  width: 90%;
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .colorRow {
   display: flex;
   align-items: center;
@@ -56,4 +80,13 @@ main {
   border: 1px solid black;
   width: 2.7em;
   height: 2.7em;
+}
+
+@media (min-width: 768px) {
+  .cuadricula {
+    width: 79%;
+    background: url(../img/printable-grid-graph-paper-20x20_405100.png);
+    background-position: center;
+    background-size: cover;
+  }
 }
