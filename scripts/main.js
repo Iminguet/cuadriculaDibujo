@@ -41,6 +41,13 @@ const P3 = document.getElementById('P3');
 const P4 = document.getElementById('P4');
 const P5 = document.getElementById('P5');
 
+//celeste
+const CE1 = document.getElementById('CE1');
+const CE2 = document.getElementById('CE2');
+const CE3 = document.getElementById('CE3');
+const CE4 = document.getElementById('CE4');
+const CE5 = document.getElementById('CE5');
+
 //cielo
 const C1 = document.getElementById('C1');
 const C2 = document.getElementById('C2');
