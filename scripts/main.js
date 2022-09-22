@@ -92,3 +92,38 @@ const O2 = document.getElementById('O2');
 const O3 = document.getElementById('O3');
 const O4 = document.getElementById('O4');
 const O5 = document.getElementById('O5');
+
+const ladoCuadrado = 32;
+let cuadradito = document.getElementsByClassName('.cell');
+let container = document.getElementById('cuadricula');
+let ancho = container.scrollWidth;
+let alto = container.scrollHeight;
+
+const cantidadAncho = parseInt(ancho / ladoCuadrado);
+const cantidadAlto = parseInt(alto / ladoCuadrado);
+const cantidadCuadrados = cantidadAlto * cantidadAncho;
+
+// console.log(`area cuadricula ${areaRectangulo}`);
+// const areaCuadrado=
+let numero = 0;
+for (let i = 0; i < cantidadCuadrados; i++) {
+    let cell = document.createElement('div');
+
+    cell.innerHTML = numero;
+    cell.className = 'cell';
+    container.appendChild(cell);
+    numero += 1;
+}
+console.log(ancho);
+console.log(alto);
+
+28 * 17;
+
+/*
+
+907 ancho
+639 alto
+
+475 cuadros
+
+*/
