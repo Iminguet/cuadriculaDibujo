@@ -93,31 +93,24 @@ const O3 = document.getElementById('O3');
 const O4 = document.getElementById('O4');
 const O5 = document.getElementById('O5');
 
+// Inicio programa
 const ladoCuadrado = 32;
-let cuadradito = document.getElementsByClassName('.cell');
-let container = document.getElementById('cuadricula');
-let ancho = container.scrollWidth;
-let alto = container.scrollHeight;
-
+const colorCuadrados = 'white';
+const container = document.getElementById('cuadricula');
+const ancho = container.scrollWidth;
+const alto = container.scrollHeight;
 const cantidadAncho = parseInt(ancho / ladoCuadrado);
 const cantidadAlto = parseInt(alto / ladoCuadrado);
 const cantidadCuadrados = cantidadAlto * cantidadAncho;
 
-// console.log(`area cuadricula ${areaRectangulo}`);
-// const areaCuadrado=
-let numero = 0;
 for (let i = 0; i < cantidadCuadrados; i++) {
-    let cell = document.createElement('div');
-
-    cell.innerHTML = numero;
-    cell.className = 'cell';
-    container.appendChild(cell);
-    numero += 1;
+    let cuadrado = document.createElement('div');
+    cuadrado.className = 'estiloCuadrado';
+    cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px;background-color:${colorCuadrados}`;
+    container.appendChild(cuadrado);
 }
 console.log(ancho);
 console.log(alto);
-
-28 * 17;
 
 /*
 
