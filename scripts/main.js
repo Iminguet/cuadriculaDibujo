@@ -103,30 +103,39 @@ const cantidadAncho = parseInt(ancho / ladoCuadrado);
 const cantidadAlto = parseInt(alto / ladoCuadrado);
 const cantidadCuadrados = cantidadAlto * cantidadAncho;
 
-for (let i = 0; i < cantidadCuadrados; i++) {
-    let cuadrado = document.createElement('div');
+const drag = (ev) => {
+  ev.dataTransfer.setData('text', ev.target.id);
+  console.log('arrastrando...', ev.target.id);
+};
+const allowDrop = (ev) => {
+  ev.preventDefault();
+};
 
-    cuadrado.className = 'estiloCuadrado';
-    // cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px;background-color:${colorCuadrados}`;
-    cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px`;
-    container.appendChild(cuadrado);
-    for (let j = 0; j < 4; j++) {
-        let cuadraditos = document.createElement('div');
-        cuadrado.appendChild(cuadraditos);
-        cuadraditos.classList.add('cuadradosInteriores');
-    }
+const drop = (ev) => {
+  ev.preventDefault(ev);
+  let data = ev.dataTransfer.getData('text');
+  ev.target.appendChild(document.getElementById(data));
+};
+const nombreCuadrado = 'cuadradoUnitarioNº';
+let numeroCuadrado = 0;
+let nombreDefinitivo = `${nombreCuadrado}${numeroCuadrado}`;
+
+for (let i = 0; i < cantidadCuadrados; i++) {
+  let cuadrado = document.createElement('div');
+  cuadrado.className = 'estiloCuadrado';
+  cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px`;
+  numeroCuadrado++;
+  nombreDefinitivo = `${nombreCuadrado}${numeroCuadrado}`;
+  cuadrado.setAttribute('id', `${nombreDefinitivo}`);
+  cuadrado.setAttribute('draggable', 'true');
+  cuadrado.setAttribute('ondragstart', 'drag(event)');
+  container.appendChild(cuadrado);
+  for (let j = 0; j < 4; j++) {
+    let cuadraditos = document.createElement('div');
+    cuadrado.appendChild(cuadraditos);
+    cuadraditos.classList.add('cuadradosInteriores');
+    cuadraditos.setAttribute('draggable', 'true');
+  }
 }
 console.log(ancho);
 console.log(alto);
-
-const papel = document.getElementById('svg836');
-console.log(papel);
-
-/*
-
-907 ancho
-639 alto
-
-475 cuadros
-
-*/
