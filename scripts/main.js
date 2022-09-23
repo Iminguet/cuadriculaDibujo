@@ -1,9 +1,11 @@
 'use-strict';
 
 // Inicio programa
-const ladoCuadrado = 32;
+
+const ladoCuadrado = 32; // TODO añadir user input y pasar valor por defecto 32px
 const colorCuadrados = 'white';
 const container = document.getElementById('cuadricula');
+
 const ancho = container.scrollWidth;
 const alto = container.scrollHeight;
 const cantidadAncho = parseInt(ancho / ladoCuadrado);
