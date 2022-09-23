@@ -105,12 +105,22 @@ const cantidadCuadrados = cantidadAlto * cantidadAncho;
 
 for (let i = 0; i < cantidadCuadrados; i++) {
     let cuadrado = document.createElement('div');
+
     cuadrado.className = 'estiloCuadrado';
-    cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px;background-color:${colorCuadrados}`;
+    // cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px;background-color:${colorCuadrados}`;
+    cuadrado.style.cssText = `width:${ladoCuadrado}px;height: ${ladoCuadrado}px`;
     container.appendChild(cuadrado);
+    for (let j = 0; j < 4; j++) {
+        let cuadraditos = document.createElement('div');
+        cuadrado.appendChild(cuadraditos);
+        cuadraditos.classList.add('cuadradosInteriores');
+    }
 }
 console.log(ancho);
 console.log(alto);
+
+const papel = document.getElementById('svg836');
+console.log(papel);
 
 /*
 

@@ -70,8 +70,16 @@ main {
 }
 
 .papeleraContainer {
-    max-width: 10em;
+    max-width: 70%;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: aqua;
+}
+
+.papelera {
+    position: relative;
 }
 
 .tapa {
@@ -82,9 +90,9 @@ main {
     height: 80%;
 }
 
-svg {
-    height: 80%;
-    width: 90%;
+img {
+    height: 100%;
+    width: 100%;
 }
 
 .papelera #tapa:hover {
@@ -115,13 +123,19 @@ svg {
 }
 
 .estiloCuadrado {
-    border: 1px solid rgb(243, 228, 228);
-    /* width: 32px;
-    height: 32px; */
+    border: 1px solid rgb(27, 27, 27);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.cell:hover {
+.estiloCuadrado:hover {
     background-color: blue;
+}
+
+.cuadradosInteriores {
+    width: 50%;
+    height: 50%;
+    border: 0.5px solid rgb(253, 227, 227);
 }
 
 
