@@ -1,143 +1,138 @@
 @charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-size: 16px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-}
-
-.cuadricula {
-    width: 100%;
-    max-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
 }
 
 .columnaColores {
-    position: relative;
-    width: 19%;
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  position: relative;
+  width: 19%;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .containerColores {
-    width: 95%;
-    height: auto;
+  width: 95%;
+  height: auto;
 }
 
 .columnaAcciones {
-    width: 19%;
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  width: 19%;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .containerBotones {
-    margin: 0.5em 0;
-    width: 90%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin: 0.5em 0;
+  width: 90%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerBotones button {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    width: 100%;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 100%;
 }
 
 .containerEstadisticas {
-    width: 90%;
-    border: 1px solid red;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 90%;
+  border: 1px solid red;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .papeleraContainer {
-    max-width: 70%;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: aqua;
+  max-width: 70%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: aqua;
 }
 
 .papelera {
-    position: relative;
+  position: relative;
 }
 
 .tapa {
-    height: 20%;
+  height: 20%;
 }
 
 .contenedor {
-    height: 80%;
+  height: 80%;
 }
 
 img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .papelera #tapa:hover {
-    background-color: red;
-    transform: rotate(45deg);
-    transform-origin: bottom right;
-    transition: 1s;
+  background-color: red;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  transition: 1s;
 }
 
 .colorRow {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0.2em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.2em 0;
 }
 
 .coloresSeleccion {
-    border: 1px solid black;
-    width: 2em;
-    height: 2em;
+  border: 1px solid black;
+  width: 2em;
+  height: 2em;
 }
 
 #cuadricula {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  max-height: 100vh;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .estiloCuadrado {
-    border: 1px solid rgb(27, 27, 27);
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .estiloCuadrado:hover {
-    background-color: blue;
+  background-color: blue;
 }
 
 .cuadradosInteriores {
-    width: 50%;
-    height: 50%;
-    border: 0.5px solid rgb(253, 227, 227);
+  width: 50%;
+  height: 50%;
+  border: 0.5px solid rgb(253, 227, 227);
 }
-
 
 /* @media (min-width: 768px) {
   .cuadricula {
