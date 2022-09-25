@@ -148,6 +148,10 @@ img {
     border: 0.5px solid rgb(253, 227, 227);
 }
 
+.cuadradosInteriores:hover {
+    background-color: red;
+}
+
 
 /* @media (min-width: 768px) {
   .cuadricula {
@@ -158,3 +162,7 @@ img {
     background-size: contain;
   }
 } */
+
+.rojo01 {
+    background-color: green;
+}

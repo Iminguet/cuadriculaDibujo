@@ -15,7 +15,7 @@
         <div class="columnaColores">
             <div class="containerColores">
                 <div class="rojo colorRow">
-                    <div class="coloresSeleccion" id="R1"></div>
+                    <div class="coloresSeleccion rojo01" id="R1" draggable="true" ondragstart="drag(event)"></div>
                     <div class="coloresSeleccion" id="R2"></div>
                     <div class="coloresSeleccion" id="R3"></div>
                     <div class="coloresSeleccion" id="R4"></div>
@@ -112,7 +112,12 @@
           >
         </div>
       </div>
-      <div class="cuadricula" id="cuadricula"></div>
+      <div
+        class="cuadricula"
+        id="cuadricula"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
       <div class="columnaAcciones">
         <div class="containerBotones">
           <button id="borrarColor">Borrar color</button>
