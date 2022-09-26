@@ -1,238 +1,398 @@
 /* ROJO */
-#R1 {
-  background-color: rgb(255, 0, 0);
-}
-#R2 {
-  background-color: rgb(255, 51, 51);
-}
-#R3 {
-  background-color: rgb(255, 102, 102);
-}
-#R4 {
-  background-color: rgb(255, 153, 153);
-}
-#R5 {
-  background-color: rgb(255, 204, 204);
+
+#R1,
+.R1 {
+    background-color: rgb(255, 0, 0);
 }
 
+#R2,
+.R2 {
+    background-color: rgb(255, 51, 51);
+}
+
+#R3,
+.R3 {
+    background-color: rgb(255, 102, 102);
+}
+
+#R4,
+.R4 {
+    background-color: rgb(255, 153, 153);
+}
+
+#R5,
+.R5 {
+    background-color: rgb(255, 204, 204);
+}
+
+
 /* *************************************************** */
+
+
 /* NARANJA */
 
-#N1 {
-  background-color: rgb(255, 128, 0);
-}
-#N2 {
-  background-color: rgb(255, 153, 51);
-}
-#N3 {
-  background-color: rgb(255, 178, 102);
-}
-#N4 {
-  background-color: rgb(255, 204, 153);
-}
-#N5 {
-  background-color: rgb(255, 229, 204);
+#N1,
+.N1 {
+    background-color: rgb(255, 128, 0);
 }
 
+#N2,
+.N2 {
+    background-color: rgb(255, 153, 51);
+}
+
+#N3,
+.N3 {
+    background-color: rgb(255, 178, 102);
+}
+
+#N4,
+.N4 {
+    background-color: rgb(255, 204, 153);
+}
+
+#N5,
+.N5 {
+    background-color: rgb(255, 229, 204);
+}
+
+
 /* *************************************************** */
+
+
 /* AMARILLO */
 
-#A1 {
-  background-color: rgb(255, 255, 0);
-}
-#A2 {
-  background-color: rgb(255, 255, 51);
-}
-#A3 {
-  background-color: rgb(255, 255, 102);
-}
-#A4 {
-  background-color: rgb(255, 255, 153);
-}
-#A5 {
-  background-color: rgb(255, 255, 204);
+#A1,
+.A1 {
+    background-color: rgb(255, 255, 0);
 }
 
+#A2,
+.A2 {
+    background-color: rgb(255, 255, 51);
+}
+
+#A3,
+.A3 {
+    background-color: rgb(255, 255, 102);
+}
+
+#A4,
+.A4 {
+    background-color: rgb(255, 255, 153);
+}
+
+#A5,
+.A5 {
+    background-color: rgb(255, 255, 204);
+}
+
+
 /* *************************************************** */
+
+
 /* MENTA */
 
-#M1 {
-  background-color: rgb(128, 255, 0);
-}
-#M2 {
-  background-color: rgb(153, 255, 51);
-}
-#M3 {
-  background-color: rgb(178, 255, 102);
-}
-#M4 {
-  background-color: rgb(204, 255, 153);
-}
-#M5 {
-  background-color: rgb(229, 255, 204);
+#M1,
+.M1 {
+    background-color: rgb(128, 255, 0);
 }
 
+#M2,
+.M2 {
+    background-color: rgb(153, 255, 51);
+}
+
+#M3,
+.M3 {
+    background-color: rgb(178, 255, 102);
+}
+
+#M4,
+.M4 {
+    background-color: rgb(204, 255, 153);
+}
+
+#M5,
+.M5 {
+    background-color: rgb(229, 255, 204);
+}
+
+
 /* *************************************************** */
+
+
 /* VERDE */
-#V1 {
-  background-color: rgb(0, 255, 0);
-}
-#V2 {
-  background-color: rgb(51, 255, 51);
-}
-#V3 {
-  background-color: rgb(102, 255, 102);
-}
-#V4 {
-  background-color: rgb(153, 255, 153);
-}
-#V5 {
-  background-color: rgb(204, 255, 204);
+
+#V1,
+.V1 {
+    background-color: rgb(0, 255, 0);
 }
 
+#V2,
+.V2 {
+    background-color: rgb(51, 255, 51);
+}
+
+#V3,
+.V3 {
+    background-color: rgb(102, 255, 102);
+}
+
+#V4,
+.V4 {
+    background-color: rgb(153, 255, 153);
+}
+
+#V5,
+.V5 {
+    background-color: rgb(204, 255, 204);
+}
+
+
 /* *************************************************** */
+
+
 /* PISTACHO */
-#P1 {
-  background-color: rgb(0, 255, 128);
-}
-#P2 {
-  background-color: rgb(51, 255, 153);
-}
-#P3 {
-  background-color: rgb(102, 255, 178);
-}
-#P4 {
-  background-color: rgb(153, 255, 204);
-}
-#P5 {
-  background-color: rgb(204, 255, 229);
+
+#P1,
+.P1 {
+    background-color: rgb(0, 255, 128);
 }
 
+#P2,
+.P2 {
+    background-color: rgb(51, 255, 153);
+}
+
+#P3,
+.P3 {
+    background-color: rgb(102, 255, 178);
+}
+
+#P4,
+.P4 {
+    background-color: rgb(153, 255, 204);
+}
+
+#P5,
+.P5 {
+    background-color: rgb(204, 255, 229);
+}
+
+
 /* *************************************************** */
+
+
 /* CELESTE */
-#CE1 {
-  background-color: rgb(0, 255, 255);
-}
-#CE2 {
-  background-color: rgb(51, 255, 255);
-}
-#CE3 {
-  background-color: rgb(102, 255, 255);
-}
-#CE4 {
-  background-color: rgb(153, 255, 255);
-}
-#CE5 {
-  background-color: rgb(204, 255, 255);
+
+#CE1,
+.E1 {
+    background-color: rgb(0, 255, 255);
 }
 
+#CE2,
+.E2 {
+    background-color: rgb(51, 255, 255);
+}
+
+#CE3,
+.E3 {
+    background-color: rgb(102, 255, 255);
+}
+
+#CE4,
+.E4 {
+    background-color: rgb(153, 255, 255);
+}
+
+#CE5,
+.E5 {
+    background-color: rgb(204, 255, 255);
+}
+
+
 /* *************************************************** */
+
+
 /* CIELO */
-#C1 {
-  background-color: rgb(0, 128, 255);
-}
-#C2 {
-  background-color: rgb(51, 153, 255);
-}
-#C3 {
-  background-color: rgb(102, 178, 255);
-}
-#C4 {
-  background-color: rgb(153, 204, 255);
-}
-#C5 {
-  background-color: rgb(204, 229, 255);
+
+#C1,
+.C1 {
+    background-color: rgb(0, 128, 255);
 }
 
+#C2,
+.C2 {
+    background-color: rgb(51, 153, 255);
+}
+
+#C3,
+.C3 {
+    background-color: rgb(102, 178, 255);
+}
+
+#C4,
+.C4 {
+    background-color: rgb(153, 204, 255);
+}
+
+#C5,
+.C5 {
+    background-color: rgb(204, 229, 255);
+}
+
+
 /* *************************************************** */
+
+
 /* AZUL */
 
-#AZ1 {
-  background-color: rgb(0, 0, 255);
-}
-#AZ2 {
-  background-color: rgb(51, 51, 255);
-}
-#AZ3 {
-  background-color: rgb(102, 102, 255);
-}
-#AZ4 {
-  background-color: rgb(153, 153, 255);
-}
-#AZ5 {
-  background-color: rgb(204, 204, 255);
+#AZ1,
+.Z1 {
+    background-color: rgb(0, 0, 255);
 }
 
+#AZ2,
+.Z2 {
+    background-color: rgb(51, 51, 255);
+}
+
+#AZ3,
+.Z3 {
+    background-color: rgb(102, 102, 255);
+}
+
+#AZ4,
+.Z4 {
+    background-color: rgb(153, 153, 255);
+}
+
+#AZ5,
+.Z5 {
+    background-color: rgb(204, 204, 255);
+}
+
+
 /* *************************************************** */
+
+
 /* LILA */
 
-#L1 {
-  background-color: rgb(127, 0, 255);
-}
-#L2 {
-  background-color: rgb(153, 51, 255);
-}
-#L3 {
-  background-color: rgb(178, 102, 255);
-}
-#L4 {
-  background-color: rgb(204, 153, 255);
-}
-#L5 {
-  background-color: rgb(229, 204, 255);
+#L1,
+.L1 {
+    background-color: rgb(127, 0, 255);
 }
 
+#L2,
+.L2 {
+    background-color: rgb(153, 51, 255);
+}
+
+#L3,
+.L3 {
+    background-color: rgb(178, 102, 255);
+}
+
+#L4,
+.L4 {
+    background-color: rgb(204, 153, 255);
+}
+
+#L5,
+.L5 {
+    background-color: rgb(229, 204, 255);
+}
+
+
 /* *************************************************** */
+
+
 /* MORADO */
 
-#MO1 {
-  background-color: rgb(255, 0, 255);
-}
-#MO2 {
-  background-color: rgb(255, 51, 255);
-}
-#MO3 {
-  background-color: rgb(255, 102, 255);
-}
-#MO4 {
-  background-color: rgb(255, 153, 255);
-}
-#MO5 {
-  background-color: rgb(255, 204, 255);
+#MO1,
+.O1 {
+    background-color: rgb(255, 0, 255);
 }
 
+#MO2,
+.O2 {
+    background-color: rgb(255, 51, 255);
+}
+
+#MO3,
+.O3 {
+    background-color: rgb(255, 102, 255);
+}
+
+#MO4,
+.O4 {
+    background-color: rgb(255, 153, 255);
+}
+
+#MO5,
+.O5 {
+    background-color: rgb(255, 204, 255);
+}
+
+
 /* *************************************************** */
+
+
 /* ROSA */
-#RO1 {
-  background-color: rgb(255, 0, 127);
-}
-#RO2 {
-  background-color: rgb(255, 51, 153);
-}
-#RO3 {
-  background-color: rgb(255, 102, 178);
-}
-#RO4 {
-  background-color: rgb(255, 153, 204);
-}
-#RO5 {
-  background-color: rgb(255, 204, 229);
+
+#RO1,
+.O1 {
+    background-color: rgb(255, 0, 127);
 }
 
+#RO2,
+.O2 {
+    background-color: rgb(255, 51, 153);
+}
+
+#RO3,
+.O3 {
+    background-color: rgb(255, 102, 178);
+}
+
+#RO4,
+.O4 {
+    background-color: rgb(255, 153, 204);
+}
+
+#RO5,
+.O5 {
+    background-color: rgb(255, 204, 229);
+}
+
+
 /* *************************************************** */
+
+
 /* OSCURO */
-#O1 {
-  background-color: rgb(0, 0, 0);
+
+#O1,
+.O1 {
+    background-color: rgb(0, 0, 0);
 }
-#O2 {
-  background-color: rgb(64, 64, 64);
+
+#O2,
+.O2 {
+    background-color: rgb(64, 64, 64);
 }
-#O3 {
-  background-color: rgb(128, 128, 128);
+
+#O3,
+.O3 {
+    background-color: rgb(128, 128, 128);
 }
-#O4 {
-  background-color: rgb(192, 192, 192);
+
+#O4,
+.O4 {
+    background-color: rgb(192, 192, 192);
 }
-#O5 {
-  background-color: rgb(255, 255, 255);
+
+#O5,
+.O5 {
+    background-color: rgb(255, 255, 255);
 }
