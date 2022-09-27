@@ -112,7 +112,7 @@ container.addEventListener('dragover', (e) => {
     e.preventDefault();
     console.log(e.dataTransfer.classList);
     let ehh = e.dataTransfer.getData('text');
-    console.log(`estamos arrastrando ${ehh} ehh`);
+    // console.log(`estamos arrastrando ${ehh} ehh`);
     // console.log(`Esta es la clase ${data}`);
     // e.target.classList.add(data);
 });
@@ -130,10 +130,41 @@ const drag = (ev) => {
 const drop = (ev) => {
     ev.preventDefault();
     let data = ev.dataTransfer.getData('text');
-    // console.log(`Esta es la clase ${data}`);
-    console.log(ev.target.classList);
+    console.log(`Esta es la clase ${data}`);
+    console.log(data);
     ev.target.classList.add(data);
     console.log(ev.target.classList);
+
+    // console.log('ejeX', ev.clientX);
+    // console.log('evento drop');
+    // console.log('ejeY', ev.clientY);
+
+    const ejeX = ev.clientX;
+    const ejeY = ev.clientY;
+
+    console.log(ejeX, ejeY);
+
+    pintarAledaños(ejeX, ejeY, data);
+};
+
+const pintarAledaños = (x, y, clase) => {
+    const arrayCoordenadas = [
+        [x, y],
+        [x, y - 8],
+        [x, y + 8],
+        [x - 8, y],
+        [x - 8, y - 8],
+        [x - 8, y + 8],
+        [x + 8, y],
+        [x + 8, y + 8],
+        [x + 8, y - 8],
+    ];
+    arrayCoordenadas.map((cada) => {
+        const x = cada[0];
+        const y = cada[1];
+        const elem = document.elementFromPoint(x, y);
+        elem.classList.add(clase);
+    });
 };
 
 /*

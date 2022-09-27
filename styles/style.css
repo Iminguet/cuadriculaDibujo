@@ -136,7 +136,6 @@ img {
 .estiloCuadrado {
     display: flex;
     flex-wrap: wrap;
-    border-radius: 50%;
 }
 
 .estiloCuadrado:hover {
@@ -146,7 +145,7 @@ img {
 .cuadradosInteriores {
     width: 50%;
     height: 50%;
-    border: 0.5px solid rgb(253, 227, 227);
+    border: 0.1px solid rgb(253, 227, 227);
 }
 
 .cuadradosInteriores:hover {
@@ -169,5 +168,9 @@ img {
 }
 
 .pasando {
-    background-color: aquamarine;
+    background-color: violet;
+}
+
+.test {
+    background-color: chartreuse;
 }
