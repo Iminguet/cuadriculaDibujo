@@ -147,21 +147,21 @@ const drop = (ev) => {
     pintarAledaños(ejeX, ejeY, data);
 };
 
-const pintarAledaños = (x, y, clase) => {
+const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
     const arrayCoordenadas = [
         [x, y],
-        [x, y - 8],
-        [x, y + 8],
-        [x - 8, y],
-        [x - 8, y - 8],
-        [x - 8, y + 8],
-        [x + 8, y],
-        [x + 8, y + 8],
-        [x + 8, y - 8],
+        [x, y - lado / 2],
+        [x, y + lado / 2],
+        [x - lado / 2, y],
+        [x - lado / 2, y - lado / 2],
+        [x - lado / 2, y + lado / 2],
+        [x + lado / 2, y],
+        [x + lado / 2, y + lado / 2],
+        [x + lado / 2, y - lado / 2],
     ];
-    arrayCoordenadas.map((cada) => {
-        const x = cada[0];
-        const y = cada[1];
+    arrayCoordenadas.map((coordenadas) => {
+        const x = coordenadas[0];
+        const y = coordenadas[1];
         const elem = document.elementFromPoint(x, y);
         elem.classList.add(clase);
     });
