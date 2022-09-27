@@ -136,6 +136,7 @@ img {
 .estiloCuadrado {
     display: flex;
     flex-wrap: wrap;
+    border-radius: 50%;
 }
 
 .estiloCuadrado:hover {
@@ -165,4 +166,8 @@ img {
 
 .rojo01 {
     background-color: green;
+}
+
+.pasando {
+    background-color: aquamarine;
 }

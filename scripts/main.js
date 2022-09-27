@@ -4,12 +4,12 @@
 
 // asignacion de variables
 const container = document.getElementById('cuadricula');
+
 const defaultLadoCuadrado = 16;
 const ladoCuadrado = undefined; // TODO añadir user input y pasar valor por defecto 32px
 // Dato del user input bajo la cuadricula de colores
 
-// entra el numero de px por cubo
-// devuelve el tamaño de la cuadricula
+// Obtenemos la cantidad total de cuadrados que formarán la cuadricula.
 const getCantidadTotalCuadrados = (lPx = defaultLadoCuadrado) => {
     console.log(lPx);
     const ancho = container.scrollWidth;
@@ -25,6 +25,7 @@ const getCantidadTotalCuadrados = (lPx = defaultLadoCuadrado) => {
     return cantidadCuadrados;
 };
 
+// Creación de elementos. Cuadrados grandes.
 const creacionCuadrados = (nº, lPx) => {
     const cuadrado = document.createElement('div');
     const nombreCuadrado = 'cuadradoUnitarioNº';
@@ -32,12 +33,14 @@ const creacionCuadrados = (nº, lPx) => {
     cuadrado.className = 'estiloCuadrado';
     cuadrado.style.cssText = `width:${lPx}px;height: ${lPx}px`;
     cuadrado.id = `${nombreDefinitivo}`;
-    cuadrado.setAttribute('draggable', 'true');
-    cuadrado.setAttribute('ondragstart', 'onDragStart(event)');
+    // cuadrado.setAttribute('draggable', 'true');
+    // cuadrado.setAttribute('ondragstart', 'onDragStart(event)');
+    cuadrado.setAttribute('ondrop', 'drop(event)');
     container.appendChild(cuadrado);
     return nombreDefinitivo;
 };
 
+// Creación de elementos. Cuadrados pequeños.
 const creacionCuadraditos = (idCuadradoGrande, iteracion) => {
     const cuadrado = document.getElementById(`${idCuadradoGrande}`);
     const cuadradoId = cuadrado.id;
@@ -47,10 +50,12 @@ const creacionCuadraditos = (idCuadradoGrande, iteracion) => {
     cuadrado.appendChild(cuadraditos);
     cuadraditos.className = 'cuadradosInteriores';
     cuadraditos.setAttribute('draggable', 'true');
-    cuadraditos.setAttribute('ondrop', 'drop(event)');
-    cuadraditos.setAttribute('ondragover', 'onDragOver(event)');
+
+    // cuadraditos.setAttribute('ondrop', 'drop(event)');
+    // cuadraditos.setAttribute('onDragOver', 'event');
 };
 
+// Creación de elementos. Cuadricula.
 const creacionCuadricula = (totales, lPx = defaultLadoCuadrado) => {
     for (let i = 0; i < totales; i++) {
         const id = creacionCuadrados(i, lPx);
@@ -61,6 +66,7 @@ const creacionCuadricula = (totales, lPx = defaultLadoCuadrado) => {
     }
 };
 
+//Llamada a función
 const totales = getCantidadTotalCuadrados(ladoCuadrado);
 
 creacionCuadricula(totales, ladoCuadrado);
@@ -101,21 +107,75 @@ de La clqse obtenido en 1.
 8- Mostrarlo en estadisticas
 
 */
-const R1 = document.getElementById('R1');
 
-const clasePe = document.getElementsByClassName('cuadradosInteriores');
-
-function onDragStart(e) {
-    // event.dataTransfer.setData('text/plain', event.target.id);
-    console.log(e.dataTransfer.className);
-}
-
-function onDragOver(e) {
+container.addEventListener('dragover', (e) => {
     e.preventDefault();
-    e.target.classList.add('pasando');
-}
+    console.log(e.dataTransfer.classList);
+    let ehh = e.dataTransfer.getData('text');
+    console.log(`estamos arrastrando ${ehh} ehh`);
+    // console.log(`Esta es la clase ${data}`);
+    // e.target.classList.add(data);
+});
 
-function drop(event) {
-    console.log('dop');
-    event.getData;
-}
+container.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('id', e.target.id);
+});
+
+const drag = (ev) => {
+    ev.dataTransfer.setData('text', ev.target.classList[1]);
+
+    console.log('arrastrando...', ev.target.classList[1]);
+};
+
+const drop = (ev) => {
+    ev.preventDefault();
+    let data = ev.dataTransfer.getData('text');
+    // console.log(`Esta es la clase ${data}`);
+    console.log(ev.target.classList);
+    ev.target.classList.add(data);
+    console.log(ev.target.classList);
+};
+
+/*
+container.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    e.target.classList.remove('pasando');
+});
+
+
+container.addEventListener('drop', (e) => {
+    e.target.classList.remove('pasando');
+});..
+
+*/
+
+/*
+// const tomarColor = (e) => {
+//     const element = document.getElementById(e);
+//     console.log(element);
+//     element.addEventListener('ondrag', (e) => {
+//         console.log('nano');
+//         e.dataTransfer.setData('id', e.target.id);
+//     });
+// };
+
+// // function onDragStart(e) {
+// //     target.dataTransfer.classList.add(e);
+// // }
+
+// // function drop(event) {
+// //     console.log('dop');
+// //     event.getData;
+// // }
+
+// let claseSeleccionada = 'defecto';
+
+// let zonaOscura = document.getElementById('zonaOscura');
+// let zonaClara = document.getElementById('zonaClara');
+
+// const clickColor = (nuevaClase) => {
+//     claseSeleccionada = nuevaClase;
+
+//     console.log(claseSeleccionada);
+// }
+*/
