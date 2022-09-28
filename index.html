@@ -107,53 +107,59 @@
                 </div>
             </div>
             <div class="containerUserInput">
-                <input type="number " name="pxLado " min="1 " id="userInput " />
-                <label for="pxLado ">Indica el tamaño del lado del cuadrado, en PX</label
-          >
-        </div>
-      </div>
-      <div class="cuadricula" id="cuadricula"></div>
-      <div class="columnaAcciones">
-        <div class="containerBotones">
-          <button id="borrarColor ">Borrar color</button>
-          <button id="borrarTodo ">Borrar todo</button>
-        </div>
-        <div class="containerEstadisticas">
-          <h1>Estadisticas</h1>
-          <ul id="usados ">
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-          </ul>
-          <ul id="totales ">
-            <li>20</li>
-          </ul>
-        </div>
-        <div class="papeleraContainer">
-          <div class="papelera">
-            <div class="tapa" id="tapa ">
-              <img src="./img/tapar.svg " alt=" " />
+                <div class="botones" onclick="ladoCuadrado(8)">8</div>
+                <div class="botones" onclick="ladoCuadrado(16)">16</div>
+                <div class="botones" onclick="ladoCuadrado(32)">32</div>
+                <div class="botones" onclick="ladoCuadrado(40)">40</div>
+                <!-- <div class="botones" id="lp8">8</div>
+                <div class="botones" id="lp16">16</div>
+                <div class="botones" id="lp32">32</div>
+                <div class="botones" id="lp40">40</div> -->
             </div>
-            <div class="contenedor">
-              <img src="./img/contenedor.svg " alt=" " />
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="cuadricula" id="cuadricula"></div>
+        <div class="columnaAcciones">
+            <div class="containerBotones">
+                <button id="borrarColor ">Borrar color</button>
+                <button id="borrarTodo ">Borrar todo</button>
+            </div>
+            <div class="containerEstadisticas">
+                <h1>Estadisticas</h1>
+                <ul id="usados ">
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </ul>
+                <ul id="totales ">
+                    <li>20</li>
+                </ul>
+            </div>
+            <div class="papeleraContainer">
+                <div class="papelera">
+                    <div class="tapa" id="tapa ">
+                        <img src="./img/tapar.svg " alt=" " />
+                    </div>
+                    <div class="contenedor">
+                        <img src="./img/contenedor.svg " alt=" " />
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="./scripts/main.js "></script>
-  </body>
+</body>
+
 </html>

@@ -145,11 +145,7 @@ img {
 .cuadradosInteriores {
     width: 50%;
     height: 50%;
-    border: 0.1px solid rgb(253, 227, 227);
-}
-
-.cuadradosInteriores:hover {
-    background-color: red;
+    /* border: 0.1px solid rgb(253, 227, 227); */
 }
 
 
@@ -173,4 +169,10 @@ img {
 
 .test {
     background-color: chartreuse;
+}
+
+.botones {
+    background-color: red;
+    width: 3em;
+    margin: 1em;
 }
