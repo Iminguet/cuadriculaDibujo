@@ -5,7 +5,7 @@
 // asignacion de variables
 const container = document.getElementById('cuadricula');
 
-const ladoCuadrado = parseInt(prompt('Px'));
+const ladoCuadrado = undefined;
 
 // TODO añadir user input y pasar valor por defecto 32px
 // Dato del user input bajo la cuadricula de colores
@@ -134,7 +134,6 @@ const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
         const elem = document.elementFromPoint(x, y);
         elem.classList.remove(elem.classList[1]);
         elem.classList.add(`${clase}`);
-
         console.log(elem.classList);
     });
 };

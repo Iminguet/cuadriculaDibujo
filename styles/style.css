@@ -131,6 +131,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    background-color: rgb(255, 253, 253);
 }
 
 .estiloCuadrado {
