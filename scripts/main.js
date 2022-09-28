@@ -73,11 +73,6 @@ const totales = getCantidadTotalCuadrados(ladoCuadrado);
 creacionCuadricula(totales, ladoCuadrado);
 
 /*
-//
-//
-*/
-
-/*
 setAttribute???
 1- Clicamos sobre un color y obtenemos su clase
 2- Al pasar por encima de un cuadradito pequeño con hover pintamos el cuadro con el color
@@ -137,8 +132,10 @@ const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
         const x = coordenadas[0];
         const y = coordenadas[1];
         const elem = document.elementFromPoint(x, y);
-        // elem.setAttribute('class', `${clase} !important`);
+        elem.classList.remove(elem.classList[1]);
         elem.classList.add(`${clase}`);
+
+        console.log(elem.classList);
     });
 };
 
