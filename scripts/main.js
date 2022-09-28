@@ -5,11 +5,15 @@
 // asignacion de variables
 const container = document.getElementById('cuadricula');
 
-const defaultLadoCuadrado = 16;
-const ladoCuadrado = undefined; // TODO añadir user input y pasar valor por defecto 32px
+const ladoCuadrado = parseInt(prompt('Px'));
+
+// TODO añadir user input y pasar valor por defecto 32px
 // Dato del user input bajo la cuadricula de colores
 
+const defaultLadoCuadrado = 16;
+
 // Obtenemos la cantidad total de cuadrados que formarán la cuadricula.
+
 const getCantidadTotalCuadrados = (lPx = defaultLadoCuadrado) => {
     console.log(lPx);
     const ancho = container.scrollWidth;
@@ -50,9 +54,6 @@ const creacionCuadraditos = (idCuadradoGrande, iteracion) => {
     cuadrado.appendChild(cuadraditos);
     cuadraditos.className = 'cuadradosInteriores';
     cuadraditos.setAttribute('draggable', 'true');
-
-    // cuadraditos.setAttribute('ondrop', 'drop(event)');
-    // cuadraditos.setAttribute('onDragOver', 'event');
 };
 
 // Creación de elementos. Cuadricula.
@@ -74,24 +75,6 @@ creacionCuadricula(totales, ladoCuadrado);
 /*
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 */
 
 /*
@@ -110,11 +93,7 @@ de La clqse obtenido en 1.
 
 container.addEventListener('dragover', (e) => {
     e.preventDefault();
-    console.log(e.dataTransfer.classList);
-    let ehh = e.dataTransfer.getData('text');
-    // console.log(`estamos arrastrando ${ehh} ehh`);
-    // console.log(`Esta es la clase ${data}`);
-    // e.target.classList.add(data);
+    e.dataTransfer.id;
 });
 
 container.addEventListener('dragstart', (e) => {
@@ -123,7 +102,6 @@ container.addEventListener('dragstart', (e) => {
 
 const drag = (ev) => {
     ev.dataTransfer.setData('text', ev.target.classList[1]);
-
     console.log('arrastrando...', ev.target.classList[1]);
 };
 
@@ -134,10 +112,6 @@ const drop = (ev) => {
     console.log(data);
     ev.target.classList.add(data);
     console.log(ev.target.classList);
-
-    // console.log('ejeX', ev.clientX);
-    // console.log('evento drop');
-    // console.log('ejeY', ev.clientY);
 
     const ejeX = ev.clientX;
     const ejeY = ev.clientY;
@@ -163,10 +137,14 @@ const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
         const x = coordenadas[0];
         const y = coordenadas[1];
         const elem = document.elementFromPoint(x, y);
-        elem.classList.add(clase);
+        // elem.setAttribute('class', `${clase} !important`);
+        elem.classList.add(`${clase}`);
     });
 };
 
+// function onDragStart(e) {
+//     target.dataTransfer.classList.add(e);
+// }
 /*
 container.addEventListener('dragleave', (e) => {
     e.preventDefault();
@@ -188,25 +166,5 @@ container.addEventListener('drop', (e) => {
 //         console.log('nano');
 //         e.dataTransfer.setData('id', e.target.id);
 //     });
-// };
-
-// // function onDragStart(e) {
-// //     target.dataTransfer.classList.add(e);
-// // }
-
-// // function drop(event) {
-// //     console.log('dop');
-// //     event.getData;
-// // }
-
-// let claseSeleccionada = 'defecto';
-
-// let zonaOscura = document.getElementById('zonaOscura');
-// let zonaClara = document.getElementById('zonaClara');
-
-// const clickColor = (nuevaClase) => {
-//     claseSeleccionada = nuevaClase;
-
-//     console.log(claseSeleccionada);
-// }
-*/
+// 
+}*/
