@@ -10,7 +10,7 @@ const ladoCuadrado = undefined;
 // TODO añadir user input y pasar valor por defecto 32px
 // Dato del user input bajo la cuadricula de colores
 
-const defaultLadoCuadrado = 16;
+const defaultLadoCuadrado = 40;
 
 // Obtenemos la cantidad total de cuadrados que formarán la cuadricula.
 
@@ -169,5 +169,5 @@ const entrando = (ev) => {
 const borrar = () => {
   const clases = document.getElementsByClassName('cuadradosInteriores');
 
-  console.log(clases);
+  console.log(typeof clases);
 };
