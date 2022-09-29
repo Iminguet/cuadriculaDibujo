@@ -170,6 +170,11 @@ const borrar = () => {
   const clases = document.getElementsByClassName('cuadradosInteriores');
   for (let i = 0; i < totales * 4; i++) {
     clases[i].classList.remove(clases[i].classList[1]);
-    clases[i].classList.add(clases[i].classList);
+    // clases[i].classList.add(clases[i].classList);
   }
+};
+
+const cambiarModo = () => {
+  container.classList.toggle('luz');
+  container.classList.toggle('noche');
 };

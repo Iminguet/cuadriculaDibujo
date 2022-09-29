@@ -23,6 +23,13 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background: url(../img/Captura.PNG) center center/cover no-repeat fixed;
+  /* From https://css.glass */
+  background: rgba(86, 187, 206, 0.26);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.6px);
+  -webkit-backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(86, 187, 206, 0.3);
 }
 
 .containerUserInput {
@@ -42,76 +49,6 @@ main {
   height: auto;
 }
 
-.columnaAcciones {
-  width: 19%;
-  background-color: green;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  display: none;
-}
-
-.containerBotones {
-  margin: 0.5em 0;
-  width: 90%;
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.containerBotones button {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  width: 100%;
-}
-
-.containerEstadisticas {
-  width: 90%;
-  border: 1px solid red;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.papeleraContainer {
-  max-width: 70%;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: aqua;
-}
-
-.papelera {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-}
-
-.tapa {
-  height: 20%;
-}
-
-.contenedor {
-  height: 80%;
-}
-
-img {
-  height: 98%;
-  width: 95%;
-}
-
-.papelera #tapa:hover {
-  background-color: red;
-  transform: rotate(45deg);
-  transform-origin: bottom right;
-  transition: 1s;
-}
-
 .colorRow {
   display: flex;
   align-items: center;
@@ -123,6 +60,7 @@ img {
   border: 1px solid black;
   width: 2em;
   height: 2em;
+  cursor: grab;
 }
 
 #cuadricula {
@@ -132,7 +70,6 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-color: rgb(255, 253, 253);
 }
 
 .estiloCuadrado {
@@ -154,20 +91,6 @@ img {
   border: 2px solid red;
 }
 
-/* @media (min-width: 768px) {
-  .cuadricula {
-    width: 79%;
-    background: url(../img/printable-grid-graph-paper-20x20_405100.png);
-    background-position: center;
-    background-repeat: repeat;
-    background-size: contain;
-  }
-} */
-
-.rojo01 {
-  background-color: green;
-}
-
 .pasando {
   background-color: violet;
 }
@@ -176,12 +99,41 @@ img {
   background-color: chartreuse;
 }
 
-.botones {
-  background-color: red;
-  width: 3em;
-  margin: 1em;
-}
-
 .borrar {
   background-color: white;
+}
+
+/* https://getcssscan.com/css-buttons-examples */
+
+.button-54 {
+  background-color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.luz {
+  background-color: white;
+}
+
+.noche {
+  background-color: #000;
 }
