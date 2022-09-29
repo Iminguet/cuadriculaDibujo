@@ -1,19 +1,13 @@
 'use-strict';
 
-// Inicio programa
-
 // asignacion de variables
 const container = document.getElementById('cuadricula');
 
-const ladoCuadrado = undefined;
-
-// TODO añadir user input y pasar valor por defecto 32px
-// Dato del user input bajo la cuadricula de colores
+let ladoCuadrado = undefined;
 
 const defaultLadoCuadrado = 40;
 
 // Obtenemos la cantidad total de cuadrados que formarán la cuadricula.
-
 const getCantidadTotalCuadrados = (lPx = defaultLadoCuadrado) => {
   console.log(lPx);
   const ancho = container.scrollWidth;
@@ -56,9 +50,9 @@ const creacionCuadraditos = (idCuadradoGrande, iteracion) => {
   cuadraditos.setAttribute('draggable', 'true');
   cuadraditos.setAttribute('ondragover', 'allowDrop(event)');
   cuadraditos.setAttribute('ondragstart', 'dragPeques(event)');
-  cuadraditos.setAttribute('ondragenter', 'entrando(event)');
   cuadraditos.setAttribute('mousedown', 'pulsacion(event)');
-  cuadraditos.setAttribute('ondrop', 'droping(event)');
+  // cuadraditos.setAttribute('ondragenter', 'entrando(event)');
+  // cuadraditos.setAttribute('ondrop', 'droping(event)');
 };
 
 // Creación de elementos. Cuadricula.
@@ -76,45 +70,6 @@ const creacionCuadricula = (totales, lPx = defaultLadoCuadrado) => {
 const totales = getCantidadTotalCuadrados(ladoCuadrado);
 
 creacionCuadricula(totales, ladoCuadrado);
-
-/*
-setAttribute???
-1- Clicamos sobre un color y obtenemos su clase
-2- Al pasar por encima de un cuadradito pequeño con hover pintamos el cuadro con el color
-de La clqse obtenido en 1.
-3- Al arrastrar, pintamos todos los cuadrados con ese color.
-4- Al apretar borrar, eliminamos la clase de lo que seleccionemos
-5- Borrar todo, limpia toda la cuadricula
-6- // TODO // Sumar todos los cuadrados
-7- // TODO // Sumar los cuadraditos pintados.
-8- Mostrarlo en estadisticas
-
-*/
-
-// container.addEventListener('dragover', (e) => {
-//   e.preventDefault();
-//   e.dataTransfer.id;
-// });
-
-// container.addEventListener('dragstart', (e) => {
-//   e.dataTransfer.setData('id', e.target.id);
-// });
-
-const drag = (ev) => {
-  ev.dataTransfer.setData('text', ev.target.classList[1]);
-  // console.log('arrastrando...', ev.target.classList[1]);
-};
-
-const drop = (ev) => {
-  ev.preventDefault();
-  let clase = ev.dataTransfer.getData('text');
-  ev.target.classList.add(clase);
-  console.log(clase);
-  const ejeX = ev.clientX;
-  const ejeY = ev.clientY;
-  console.log(ejeX, ejeY);
-  pintarAledaños(ejeX, ejeY, clase);
-};
 
 const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
   const arrayCoordenadas = [
@@ -137,33 +92,33 @@ const pintarAledaños = (x, y, clase, lado = defaultLadoCuadrado) => {
   });
 };
 
-//mousedown
+const drag = (ev) => {
+  ev.dataTransfer.setData('text', ev.target.classList[1]);
+};
+
+const drop = (ev) => {
+  ev.preventDefault();
+  let clase = ev.dataTransfer.getData('text');
+  ev.target.classList.add(clase);
+  const ejeX = ev.clientX;
+  const ejeY = ev.clientY;
+  pintarAledaños(ejeX, ejeY, clase, ladoCuadrado);
+};
+
+// mousedown;
 const pulsacion = (ev) => {
-  // ev.dataTransfer.setData('class', ev.target.classList[1]);
-  // const clase = ev.target.classList[1];
+  ev.dataTransfer.setData('class', ev.target.classList[1]);
+
   console.log('pulso');
 };
-//ondragstart
-// const dragPeques = (ev) => {
-
-// };
+// ondragstart;
+const dragPeques = (ev) => {
+  ev.dataTransfer.setData('text', ev.target.classList[1]);
+};
 
 //ondragover
 const allowDrop = (ev) => {
   ev.preventDefault();
-};
-
-//ondrag
-// const recorriendo = (ev) => {
-//   const clase = ev.target.classList[1];
-//   console.log(clase);
-// };
-
-//ondragenter
-const entrando = (ev) => {
-  let clase = ev.dataTransfer.getData('class');
-  // console.log(`this is clase===> ${clase}`);
-  // console.log('entro por aquí');
 };
 
 const borrar = () => {
@@ -178,3 +133,28 @@ const cambiarModo = () => {
   container.classList.toggle('luz');
   container.classList.toggle('noche');
 };
+
+let ladoCuadradoUser = (ev) => {
+  ladoCuadrado = ev;
+  console.log(ev);
+};
+
+// TODO //
+/* Implementar la function que al arrastar, pinte todos los elementos
+del mismo color que obtiene del elemento sobre el que se clicka
+
+
+//ondrag
+const recorriendo = (ev) => {
+  const clase = ev.target.classList[1];
+  console.log(clase);
+};
+
+//ondragenter
+const entrando = (ev) => {
+  let clase = ev.dataTransfer.getData('class');
+  // console.log(`this is clase===> ${clase}`);
+  // console.log('entro por aquí');
+};
+
+*/
