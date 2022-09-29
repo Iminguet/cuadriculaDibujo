@@ -41,6 +41,7 @@ main {
 
 .containerUserInput > * {
   width: 80%;
+  height: 90%;
   color: aliceblue;
 }
 
@@ -58,8 +59,8 @@ main {
 
 .coloresSeleccion {
   border: 1px solid black;
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
   cursor: grab;
 }
 
@@ -99,7 +100,7 @@ main {
 
 .button-54 {
   /* background-color: beige; */
-  margin: 1em 0;
+  margin: 5% 0;
   width: 90%;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
