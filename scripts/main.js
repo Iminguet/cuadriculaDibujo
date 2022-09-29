@@ -162,12 +162,14 @@ const allowDrop = (ev) => {
 //ondragenter
 const entrando = (ev) => {
   let clase = ev.dataTransfer.getData('class');
-  console.log(`this is clase===> ${clase}`);
-  console.log('entro por aquí');
+  // console.log(`this is clase===> ${clase}`);
+  // console.log('entro por aquí');
 };
 
 const borrar = () => {
   const clases = document.getElementsByClassName('cuadradosInteriores');
-
-  console.log(typeof clases);
+  for (let i = 0; i < totales * 4; i++) {
+    clases[i].classList.remove(clases[i].classList[1]);
+    clases[i].classList.add(clases[i].classList);
+  }
 };
