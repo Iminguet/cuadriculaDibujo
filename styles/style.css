@@ -23,7 +23,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: url(../img/Captura.PNG) center center/cover no-repeat fixed;
+
   /* From https://css.glass */
   background: rgba(86, 187, 206, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -77,26 +77,18 @@ main {
   flex-wrap: wrap;
 }
 
-.estiloCuadrado:hover {
-  border: 1px solid black;
-}
+/* .estiloCuadrado:hover {
+  border: 0.5px solid rgb(175, 180, 245);
+} */
 
 .cuadradosInteriores {
   width: 50%;
   height: 50%;
-  /* border: 0.1px solid rgb(253, 227, 227); */
+  border: 0.1px solid rgb(225, 226, 238);
 }
 
 .cuadradosInteriores:hover {
   border: 2px solid red;
-}
-
-.pasando {
-  background-color: violet;
-}
-
-.test {
-  background-color: chartreuse;
 }
 
 .borrar {
@@ -106,7 +98,9 @@ main {
 /* https://getcssscan.com/css-buttons-examples */
 
 .button-54 {
-  background-color: red;
+  /* background-color: beige; */
+  margin: 1em 0;
+  width: 90%;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
