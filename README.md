@@ -2,7 +2,7 @@
 
 # Cuadricula de dibujo.
 
-<img src="./img/holaMundo.png" />
+<img src="./img/hola.png" />
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/HTML"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
 
@@ -48,12 +48,12 @@ https://iminguet.github.io/dinamicShowCase
 
 Para empezar a dibujar, primero elige el tamaño del pincel de entre las opciones que se dan en la parte inferior izquierda de la aplicación.
 
-<img src="./img/pinceles.png" />
+<img src="./img/pinceles.png"/>
 
 Arrastra el color que quieras a la cuadricula y suelta, el color se ubicará en relación al puntero del ratón.
 
-<img src="./img/flechainit.png" />
-<img src="./img/flechaFin.png" />
+<img src="./img/flechaInit.png"/>
+<img src="./img/flechaFin.png"/>
 
 Si quieres replicar ese color, puedes arrastrar desde ese mismo elemento y al soltar, de igual forma, pintará la cuadricula.
 
