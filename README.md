@@ -48,7 +48,7 @@ https://iminguet.github.io/dinamicShowCase
 
 Para empezar a dibujar, primero elige el tamaño del pincel de entre las opciones que se dan en la parte inferior izquierda de la aplicación.
 
-<img src="./img/pinceles.png"/>
+<img src="./img/pincelees.png"/>
 
 Arrastra el color que quieras a la cuadricula y suelta, el color se ubicará en relación al puntero del ratón.
 
