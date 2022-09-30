@@ -42,7 +42,7 @@ Navegador web.
 
 ### Deployment
 
-https://iminguet.github.io/dinamicShowCase
+https://iminguet.github.io/cuadriculaDibujo/
 
 ## Uso
 
