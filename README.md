@@ -53,6 +53,7 @@ Para empezar a dibujar, primero elige el tamaño del pincel de entre las opcione
 Arrastra el color que quieras a la cuadricula y suelta, el color se ubicará en relación al puntero del ratón.
 
 <img src="./img/flechainit.png" />
+
 <img src="./img/flechaFin.png" />
 
 Si quieres replicar ese color, puedes arrastrar desde ese mismo elemento y al soltar, de igual forma, pintará la cuadricula.
